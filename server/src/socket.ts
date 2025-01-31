@@ -1,19 +1,15 @@
-import { Server } from 'ws';
+import { Server } from 'socket.io';
 
 export function setupWebSocket(server: any) {
-	const wss = new Server({ server });
+	const io = new Server(server);
 
-	wss.on('connection', (ws) => {
-		console.log('Player connected');
-
-		ws.on('message', (data) => {
-			console.log('Received:', data);
+	io.on('connection', (socket) => {
+		socket.on('joinGame', (roomId) => {
+			socket.join(roomId);
 		});
 
-		ws.on('close', () => {
-			console.log('Player disconnected');
+		socket.on('chatMessage', (message) => {
+			io.to(message.roomId).emit('message', message);
 		});
 	});
-
-	return wss;
 }
