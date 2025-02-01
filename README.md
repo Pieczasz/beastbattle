@@ -6,7 +6,7 @@ BeastBattle is an online multiplayer card game built with the MERN stack, WebSoc
 
 ## 1. Landing page
 
-[ ] - Create basic components
-[ ] - Working routing system
+[X] - Create basic components
+[X] - Working routing system
 [ ] - Landing Page design and creation
 [ ] - Animations

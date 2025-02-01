@@ -42,7 +42,7 @@ const HeroSection = () => {
 
 				{/* Content */}
 				<div className="relative z-10 pt-20 md:pt-0 mt-20">
-					<h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white">
+					<h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">
 						BeastBattle
 					</h1>
 					<h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300">
@@ -51,19 +51,30 @@ const HeroSection = () => {
 					<div className="space-y-4 mt-8">
 						<Button onClick={handleFindGame}>Find Game</Button>
 					</div>
-					<div className="flex flex-col md:flex-row justify-center gap-4 mt-8 items-center">
-						<Card
-							description="A legendary bird that rises from its own ashes"
-							name="Phoenix"
-							imageUrl="/assets/cardImages/phoenix.png"
-							rarity="legendary"
-						/>
-						<Card
-							description="A legendary bird that rises from its own ashes"
-							name="Tiger"
-							imageUrl="/assets/cardImages/tiger.png"
-							rarity="epic"
-						/>
+					<div className="flex justify-center items-center mt-16">
+						<div className="transform rotate-[13deg] transition-all duration-300 hover:translate-y-[-15px]">
+							<Card
+								description="Force a trade with another player"
+								name="Mystic Tiger"
+								imageUrl="/assets/cardImages/tiger.png"
+								rarity="rare"
+							/>
+						</div>
+						<div className="transform transition-all duration-300 hover:translate-y-[-15px] rotate-[2deg]">
+							<Card
+								description="Forces the next player to draw 2 cards"
+								name="Explosive Racoon"
+								imageUrl="/assets/cardImages/racoonexplosive.png"
+							/>
+						</div>
+						<div className="transform -rotate-[10deg] transition-all duration-300 hover:translate-y-[-21px]">
+							<Card
+								description="Resurrect a player from elimination"
+								name="Phoenix Down"
+								imageUrl="/assets/cardImages/phoenix.png"
+								rarity="legendary"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
